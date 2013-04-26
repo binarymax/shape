@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<title>Shape Experiment</title>
+	<meta name="description" content="Identify the shape as quickly as possible">
+	<meta name="author" content="Max Irwin">
+	<meta name="canonical" content="shapex.org">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		#content	{ font-size:1.0em; margin-left:auto; margin-right:auto; max-width:420px; text-align: center;	}
+		footer		{ font-size:0.9em; font-style: italic; margin-top:50px; padding-top:5px; border-top:1px solid #999; vertical-align: top; }
+		#experiment	{ display:none; 	max-width:420px;	margin-left:0px;	}
+		#shapes 	{ display:block;	margin-left:0px;	clear:both;		}
+		#buttons 	{ display:block;	list-style: none;	margin:0px;		height:100px; }
+		#buttons div{ float:left;		margin:2px; 		padding:0px;	}
+		#results	{ display:block;	list-style: none;	margin-top:20px;padding-top:10px;	padding-left:3px;	width: 400px; clear: both; }
+		#results li	{ width:100%;		margin-bottom:10px;	background-color: #fff; border-radius:2px; cursor:pointer;}
+		#results li:hover {  background-color:#f9f9f9; }
+		#total { display:none; width:400px; margin:0px; margin-top:30px; padding:0px; padding-top:30px; border-top:1px solid #999; color: #555; margin-left:5px;}
+		#total table	{ width: 100%; margin:0px; padding:0px; }
+		#total td, #total th	{ width:20%; margin:0px; padding:5px; }
+		#total tbody tr:hover	{ color:#333; background-color:#f9f9f9; }
+		#info		{ display:none; }
+		#accept		{ margin-top:40px; }
+		#tw-root	{ margin-left:30px;}
+		.column		{ margin-bottom:20px; margin-left:0px; margin-right:0px;}
+		.link		{ color:#777; text-decoration: none; }
+		.link:hover	{ color:#777; text-decoration: underline; }
+		.link:visted{ color:#777; }
+		.button		{ width:98px; 		height:60px; 		padding:0px;	background-color: transparent; border:2px solid #999; border-radius:3px; }
+		.correct	{ color:green;		font-weight:bold; border:1px solid green; }
+		.incorrect	{ color:red;		font-weight:bold; border:1px solid red; }
+		.hidden	{ display:none; }
+		.pixel { width:0px; height:0px; display:none; }
+		#begin	{ background-color:#99FF77; font-weight:bold; font-size:1.2em; }
+	</style>
+</head>
+<body>
+
+	<section id="content">
+		<header class="column">
+			<h1>Shape Experiment</h1>
+			<p id="message">
+					Identify the shape as quickly as possible.<br>
+					Play as often as you like. Thanks for your help!<br>
+					<a href="#" class="link" id="cookies">Cookies</a> are used to tally.  Press "Begin" if that is OK.
+			</p>
+			<p id="accept">
+					<input type="button" name="begin" id="begin" value="Begin" class="button">
+			</p>
+		</header>
+			
+		<section id="experiment" class="column">
+			<div id="shapes"></div>
+			<div id="buttons"></div><br>
+			<ul  id="results"></ul>
+			<div id="total">
+				<table>
+					<thead><tr><th>&nbsp;<br>Totals</th><th>Best<br>Percent</th><th>Best<br>Time</th><th>Average<br>Percent</th><th>Average<br>Time</th></tr></thead>
+					<tbody id="totals"></tbody>
+				</table>
+			</div>
+
+		</section>
+		
+		<noscript class="column">
+			<h2>This experiment requires javascript.</h2>
+			<p>If you would like to play, please enable javascript and try again.</p>
+		</noscript>
+	
+		<section id="info" class="column">
+			<a href="http://google.com/analytics" class="link" target="_blank">Google Analytics</a> is used to see how everyone does overall.<br>
+			Your personal details will not be shared.<br>
+			The overall results may be shared.
+		</section>
+	
+		<footer class="column">
+			<div id="social">
+				<a id="facebook" class="link">facebook</a> | 
+				<a id="twitter" class="link">twitter</a> |  		
+				<a id="about" class="link">about</a> 
+			</div>
+			<div id="fb-root" class="hidden"></div> <div id="tw-root" class="hidden"></div>
+			<div id="ab-root" class="hidden">
+				A <a href="https://twitter.com/binarymax" class="link" target="_blank">Max Irwin</a> project | 
+				Source available on <a href="https://github.com/binarymax/shape" class="link" target="_blank">github</a>
+			</div>
+		</footer>
+
+	</section>
+	
+	<script type="text/javascript" src="/shape.js"></script>
+
+</body>
+</html>
