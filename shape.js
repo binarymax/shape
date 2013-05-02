@@ -2,7 +2,7 @@
 * Shape Experiment
 * MIT License
 * Copyright 2013, Max Irwin
-* https://github.com/binarymax/shape_experiment/
+* https://github.com/binarymax/shape
 *************************************************/
 
 "use strict";
@@ -518,6 +518,7 @@ var ui = (function() {
 				tally(i,t.best_percent*100,t.best_time/1000,t.avg_percent*100,t.avg_time/1000);
 			}
 		}
+		social();
 	};
 	
 	//Marks the shape as incorrect or correct sends to the 
